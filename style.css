@@ -16,6 +16,14 @@ body {
     overflow: hidden;
 }
 
+.title {
+    font-size: 8rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+    margin-top: 2rem;
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -25,6 +33,7 @@ body {
 .die {
     margin: 1.5rem;
     width: 180px;
+    transition: all 0.1s;
 }
 
 .die:nth-of-type(odd) {
@@ -41,13 +50,6 @@ body {
     align-items: center;
 }
 
-.title {
-    font-size: 8rem;
-    font-weight: bold;
-    font-style: italic;
-    margin: 0;
-}
-
 .contentContainer {
     display: flex;
     flex-direction: column;
@@ -59,6 +61,7 @@ body {
 
 input {
     all: unset;
+    caret-color: transparent;
     width: 5rem;
     height: 5rem;
     background-color: #ffffff83;
@@ -77,16 +80,27 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.02s;
 }
 
 .rollButton:hover {
     cursor: pointer;
+    background-color: #ffffff2d;
 }
 
 .rollButton:active {
-    background-color: #ffffff2d;
-    scale: 95%;
+    scale: 90%;
     user-select: none;
 }
 
+#rollMessage {
+    margin: 0;
+    margin-top: 7rem;
+}
+
+#rollResult {
+    margin: 0;
+    margin-top: 1rem;
+    font-size: 500%;
+    font-weight: bold;
+    transition: all 0.1s;
+}

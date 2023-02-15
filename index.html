@@ -10,39 +10,52 @@
 </head>
 
 <body>
+
     <div class="sidebar">
         <img class="die" src="./reddie.png" alt="Red Die">
         <img class="die" src="./reddie.png" alt="Red Die">
         <img class="die" src="./reddie.png" alt="Red Die">
     </div>
+
     <div class="contentContainer">
+
         <p class="title">Dice Roller</p>
-        
 
-            <h3>Select Sides:</h3>
-            <input type="number" id="sides" min="1" max="20" value="1">
+        <h3>Select Sides:</h3>
 
-            <div class="rollButton" onclick="handleRoll()"><h2>Roll!</h2></div>
+        <input type="number" id="sides" min="1" max="20" value="6">
 
-            <h2 id="rollResult"></h2>
+        <div class="rollButton" onclick="handleRoll()">
+            <h2>Roll!</h2>
+        </div>
 
-        
+        <h2 id="rollMessage">Press 'Roll' to start</h2>
+
+        <p id="rollResult">?</p>
+
     </div>
+
     <div class="sidebar">
         <img class="die" src="./reddie.png" alt="Red Die">
         <img class="die" src="./reddie.png" alt="Red Die">
         <img class="die" src="./reddie.png" alt="Red Die">
     </div>
+
     <script src="diceroll.js"></script>
+
     <script>
         function handleRoll() {
             let result = diceRoll(document.getElementById('sides').value)
-            document.getElementById('rollResult').innerText = 'Rolling...'
+            document.getElementById('rollResult').style = 'opacity: 0'
+            document.getElementById('rollMessage').innerText = 'Rolling...'
             setTimeout(() => {
-                document.getElementById('rollResult').innerText = 'You rolled a ' + result
-            }, 500)
+                document.getElementById('rollMessage').innerText = 'You rolled'
+                document.getElementById('rollResult').innerText = result
+                document.getElementById('rollResult').style = 'opacity: 1'
+            }, 700)
         }
     </script>
+
 </body>
 
 </html>
