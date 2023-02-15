@@ -1,0 +1,92 @@
+h1 {
+    margin: 0;
+}
+
+body {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+    background: linear-gradient(#30aa00, #164d00);
+    text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.466);
+    color: white;
+    overflow: hidden;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.die {
+    margin: 1.5rem;
+    width: 180px;
+}
+
+.die:nth-of-type(odd) {
+    transform: rotate(-20deg);
+}
+
+.die:nth-of-type(even) {
+    transform: rotate(20deg);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 8rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 150%;
+}
+
+input {
+    all: unset;
+    width: 5rem;
+    height: 5rem;
+    background-color: #ffffff83;
+    border-radius: 0.5rem;
+    text-shadow: none;
+    font-size: 150%;
+}
+
+.rollButton {
+    width: 8rem;
+    height: 5rem;
+    background-color: #ffffff83;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    text-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.02s;
+}
+
+.rollButton:hover {
+    cursor: pointer;
+}
+
+.rollButton:active {
+    background-color: #ffffff2d;
+    scale: 95%;
+    user-select: none;
+}
+
