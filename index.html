@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dice Roll</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img class="die" src="./reddie.png" alt="Red Die">
+        <img class="die" src="./reddie.png" alt="Red Die">
+        <img class="die" src="./reddie.png" alt="Red Die">
+    </div>
+    <div class="contentContainer">
+        <p class="title">Dice Roller</p>
+        
+
+            <h3>Select Sides:</h3>
+            <input type="number" id="sides" min="1" max="20" value="1">
+
+            <div class="rollButton" onclick="handleRoll()"><h2>Roll!</h2></div>
+
+            <h2 id="rollResult"></h2>
+
+        
+    </div>
+    <div class="sidebar">
+        <img class="die" src="./reddie.png" alt="Red Die">
+        <img class="die" src="./reddie.png" alt="Red Die">
+        <img class="die" src="./reddie.png" alt="Red Die">
+    </div>
+    <script src="diceroll.js"></script>
+    <script>
+        function handleRoll() {
+            let result = diceRoll(document.getElementById('sides').value)
+            document.getElementById('rollResult').innerText = 'Rolling...'
+            setTimeout(() => {
+                document.getElementById('rollResult').innerText = 'You rolled a ' + result
+            }, 500)
+        }
+    </script>
+</body>
+
+</html>
