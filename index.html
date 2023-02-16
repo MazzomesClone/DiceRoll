@@ -25,9 +25,9 @@
 
         <input type="number" id="sides" min="1" max="20" value="6">
 
-        <div class="rollButton" onclick="handleRoll()">
+        <button class="rollButton" onclick="handleRoll()">
             <h2>Roll!</h2>
-        </div>
+        </button>
 
         <h2 id="rollMessage">Press 'Roll' to start</h2>
 
@@ -44,16 +44,21 @@
     <script src="diceroll.js"></script>
 
     <script>
+
         function handleRoll() {
+
             let result = diceRoll(document.getElementById('sides').value)
             document.getElementById('rollResult').style = 'opacity: 0'
             document.getElementById('rollMessage').innerText = 'Rolling...'
+
             setTimeout(() => {
-                document.getElementById('rollMessage').innerText = 'You rolled'
                 document.getElementById('rollResult').innerText = result
+                document.getElementById('rollMessage').innerText = 'You rolled'
                 document.getElementById('rollResult').style = 'opacity: 1'
             }, 700)
+
         }
+        
     </script>
 
 </body>
