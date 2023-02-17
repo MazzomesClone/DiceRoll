@@ -6,7 +6,7 @@ function diceRoll(sides) {
 
 var results = []
 
-for (let i = 0; i < 200; i++) {
+for (let i = 0; i < 10; i++) {
     results.push(diceRoll(20))
 }
 
